@@ -73,6 +73,7 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\UI\PlasticDialog.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\Inspector\DrawInspectorOperations.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\UI\Tree\TreeHeaderColumns.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\QueryVisualElementsExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\UI\MeasureMaxWidth.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\WebApi\ChangesetFromCollabCommitResponse.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\Views\IncomingChanges\Gluon\Errors\ErrorListViewItem.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\AssetsUtils\AssetsPath.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\Views\PendingChanges\PendingChangesSelection.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\AutoRefresh.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\VisualElementExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\UI\StatusBar\StatusBar.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\Views\History\HistoryTab.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\UI\UnityConstants.cs" />
@@ -347,8 +349,6 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\Views\CreateWorkspace\CreateWorkspaceViewState.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\Configuration\CloudEdition\Welcome\OrganizationPanel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\WorkspaceWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\VisualElementExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\QueryVisualElementsExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.3\Editor\PlasticSCM\Assets\Styles\DownloadPlasticExeWindow.uss" />

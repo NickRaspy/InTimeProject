@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - MathLevel_Box
+  - BalanceLevel_Box
   layers:
   - Default
   - TransparentFX

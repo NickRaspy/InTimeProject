@@ -314,6 +314,10 @@
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.VisualScripting.Flow.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/UnityEngine.UI.ref.dll"
+"Assets/Balance Level/BalanceDeathZone.cs"
+"Assets/Balance Level/PlatformMove.cs"
+"Assets/Catch Pen Level/CatchPenManager.cs"
+"Assets/Catch Pen Level/YourHandTrigger.cs"
 "Assets/Math Level/AnswerBox.cs"
 "Assets/Math Level/MathLevelManager.cs"
 -langversion:9.0
