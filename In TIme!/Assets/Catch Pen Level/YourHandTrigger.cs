@@ -7,14 +7,14 @@ public class YourHandTrigger : MonoBehaviour
     [SerializeField] private CatchPenManager cpm;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name == "Pen")
+        if(collision.name == "Pen" && !cpm.didClick)
         {
             cpm.inHand = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.name == "Pen")
+        if (collision.name == "Pen" && !cpm.didClick)
         {
             cpm.inHand = false;
         }

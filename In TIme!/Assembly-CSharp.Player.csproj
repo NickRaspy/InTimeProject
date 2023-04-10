@@ -56,12 +56,14 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Math Level\AnswerBox.cs" />
-    <Compile Include="Assets\Math Level\MathLevelManager.cs" />
-    <Compile Include="Assets\Balance Level\PlatformMove.cs" />
-    <Compile Include="Assets\Balance Level\BalanceDeathZone.cs" />
     <Compile Include="Assets\Catch Pen Level\CatchPenManager.cs" />
+    <Compile Include="Assets\Balance Level\PlatformMove.cs" />
+    <Compile Include="Assets\Math Level\AnswerBox.cs" />
+    <Compile Include="Assets\Balance Level\BalanceDeathZone.cs" />
     <Compile Include="Assets\Catch Pen Level\YourHandTrigger.cs" />
+    <Compile Include="Assets\Math Level\MathLevelManager.cs" />
+    <Compile Include="Assets\Find Task Level\FindTaskManager.cs" />
+    <Compile Include="Assets\Find Task Level\IconClick.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,8 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - CatchPenManager
-    - YourHandTrigger
+    - FindTaskManager
+    - IconClick
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -48,22 +48,24 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 50
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 102
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 33788}
+      Script: {instanceID: 28636}
     - Class: 114
-      Script: {instanceID: 34242}
+      Script: {instanceID: 33890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -353,6 +355,12 @@ ScriptsOnlyBuild:
     className: UnityOnScrollMessageListener
   - hash:
       serializedVersion: 2
+      Hash: cc21d62d2ab727b209e69e722f776501
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CatchPenManager
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -369,6 +377,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Flow.dll
     namespaceName: Unity.VisualScripting
     className: ScriptMachine
+  - hash:
+      serializedVersion: 2
+      Hash: 854a2e404c9c29d51cdc40f2947d086a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlatformMove
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -689,10 +703,22 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
+      Hash: 8a193a6dfd55f74156b7c92dde258413
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BalanceDeathZone
+  - hash:
+      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: c367af1562a81f1f60a7fb081edd6135
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: YourHandTrigger
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1013,30 +1039,18 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 854a2e404c9c29d51cdc40f2947d086a
+      Hash: c2ad75c52735a1d4b218520384d839a7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlatformMove
+    className: FindTaskManager
   - hash:
       serializedVersion: 2
-      Hash: 8a193a6dfd55f74156b7c92dde258413
+      Hash: c68e03b01b8446e6acbcf802d5d85216
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: BalanceDeathZone
-  - hash:
-      serializedVersion: 2
-      Hash: cc21d62d2ab727b209e69e722f776501
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CatchPenManager
-  - hash:
-      serializedVersion: 2
-      Hash: c367af1562a81f1f60a7fb081edd6135
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: YourHandTrigger
+    className: IconClick
   platform: 13
   scenePathNames:
   - Assets/Scenes/NickScene.unity
   playerPath: "C:/Users/nikit/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B/test2.apk"
+    \u0441\u0442\u043E\u043B/\u0432\u0430\u0436\u043D\u044B\u0435 \u0444\u0430\u0439\u043B\u044B/test3.apk"

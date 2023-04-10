@@ -372,6 +372,8 @@
 "Assets/Balance Level/PlatformMove.cs"
 "Assets/Catch Pen Level/CatchPenManager.cs"
 "Assets/Catch Pen Level/YourHandTrigger.cs"
+"Assets/Find Task Level/FindTaskManager.cs"
+"Assets/Find Task Level/IconClick.cs"
 "Assets/Math Level/AnswerBox.cs"
 "Assets/Math Level/MathLevelManager.cs"
 -langversion:9.0

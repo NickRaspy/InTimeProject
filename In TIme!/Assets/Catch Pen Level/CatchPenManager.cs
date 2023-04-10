@@ -14,6 +14,7 @@ public class CatchPenManager : MonoBehaviour
     [SerializeField] private Sprite fingerClosed;
 
     public bool inHand = false;
+    public bool didClick = false;
     private Touch touch;
     void Start()
     {
@@ -27,12 +28,14 @@ public class CatchPenManager : MonoBehaviour
     {
         if (inHand)
         {
+            didClick = true;
             pen.Sleep();
             yoursFingers.sprite = fingerClosed;
-            yoursFingers.sortingOrder = 2;
+            yoursFingers.sortingOrder = 3;
         }
         else
         {
+            didClick = true;
             yoursFingers.sprite = fingerClosed;
         }
     }
@@ -43,12 +46,14 @@ public class CatchPenManager : MonoBehaviour
         if(touch.phase == TouchPhase.Began){
             if (inHand)
             {
+                didClick = true;
                 pen.Sleep();
                 yoursFingers.sprite = fingerClosed;
-                yoursFingers.sortingOrder = 2;
+                yoursFingers.sortingOrder = 3;
             }
             else
             {
+                didClick = true;
                 yoursFingers.sprite = fingerClosed;
             }
         }
