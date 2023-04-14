@@ -1,8 +1,33 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AnswerBox
+    - BackpackLevelManager
+    - BackpackTrigger
+    - BalanceDeathZone
+    - CanteenLevelManager
+    - CatchPenManager
+    - DeathZone
+    - DishClick
+    - ExitTrigger
     - FindTaskManager
+    - FreezeBall
+    - GameBGTransition
+    - GameManager
+    - GameTransition
+    - HandCollision
     - IconClick
+    - ItemMove
+    - JumpTrigger
+    - LevelEnd
+    - MathLevelManager
+    - PlatformMove
+    - PlayerControl
+    - PlayerTrigger
+    - Transition
+    - UI
+    - VolleyballLevelManager
+    - YourHandTrigger
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -36,10 +61,56 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-  serializedClasses: {}
-  methodsToPreserve: []
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+  serializedClasses:
+    Assembly-CSharp:
+    - CanteenLevelManager/Dishes
+    - CanteenLevelManager/Human
+    - DeathZone/ObstacleType
+    UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
+    - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
+    UnityEngine.UI:
+    - UnityEngine.EventSystems.EventTrigger/Entry
+    - UnityEngine.EventSystems.EventTrigger/TriggerEvent
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.SpriteState
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerControl
+    methodName: Jump
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerControl
+    methodName: SetDirect
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerControl
+    methodName: SetDirect
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerControl
+    methodName: SetDirect
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayerControl
+    methodName: SetDirect
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: ExitLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: RestartLevel
   sceneClasses:
-    Assets/Scenes/NickScene.unity:
+    Assets/Scenes/Level1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -54,18 +125,98 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 102
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 28636}
+      Script: {instanceID: 1582}
     - Class: 114
-      Script: {instanceID: 33890}
+      Script: {instanceID: 2738}
+    - Class: 114
+      Script: {instanceID: 2968}
+    - Class: 114
+      Script: {instanceID: 3302}
+    - Class: 114
+      Script: {instanceID: 3408}
+    - Class: 114
+      Script: {instanceID: 3488}
+    - Class: 114
+      Script: {instanceID: 3614}
+    - Class: 114
+      Script: {instanceID: 3656}
+    - Class: 114
+      Script: {instanceID: 3684}
+    - Class: 114
+      Script: {instanceID: 4064}
+    - Class: 114
+      Script: {instanceID: 4192}
+    - Class: 114
+      Script: {instanceID: 4330}
+    - Class: 114
+      Script: {instanceID: 4388}
+    - Class: 114
+      Script: {instanceID: 4834}
+    - Class: 114
+      Script: {instanceID: 4966}
+    - Class: 114
+      Script: {instanceID: 5690}
+    - Class: 114
+      Script: {instanceID: 5818}
+    - Class: 114
+      Script: {instanceID: 5936}
+    - Class: 114
+      Script: {instanceID: 5982}
+    - Class: 114
+      Script: {instanceID: 6152}
+    - Class: 114
+      Script: {instanceID: 6316}
+    - Class: 114
+      Script: {instanceID: 6358}
+    - Class: 114
+      Script: {instanceID: 6368}
+    - Class: 114
+      Script: {instanceID: 6436}
+    - Class: 114
+      Script: {instanceID: 6472}
+    - Class: 114
+      Script: {instanceID: 6780}
+    - Class: 114
+      Script: {instanceID: 6880}
+    - Class: 114
+      Script: {instanceID: 6894}
+    - Class: 114
+      Script: {instanceID: 6904}
+    - Class: 114
+      Script: {instanceID: 6998}
+    - Class: 114
+      Script: {instanceID: 7704}
+    - Class: 114
+      Script: {instanceID: 7758}
+    - Class: 114
+      Script: {instanceID: 7884}
+    - Class: 114
+      Script: {instanceID: 8578}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -75,6 +226,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -343,6 +500,12 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 9534d13d38a640b23df6e376f05cd9d9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CanteenLevelManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -355,7 +518,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollMessageListener
   - hash:
       serializedVersion: 2
-      Hash: cc21d62d2ab727b209e69e722f776501
+      Hash: 57f581fab3459a5309d510d1af1f2be5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CatchPenManager
@@ -389,6 +552,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSelectMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c2ad75c52735a1d4b218520384d839a7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FindTaskManager
+  - hash:
+      serializedVersion: 2
+      Hash: bea23cb18abb5319c04308982d00255d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemMove
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -439,6 +614,12 @@ ScriptsOnlyBuild:
     className: ScriptGraphAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FreezeBall
+  - hash:
+      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -451,6 +632,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameBGTransition
+  - hash:
+      serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -461,6 +648,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: 
     className: SpriteShapeGeometryCache
+  - hash:
+      serializedVersion: 2
+      Hash: 1531f888b4399449e0f2576846324552
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VolleyballLevelManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -479,6 +672,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 30ae5d6dbd0fe3ebd0421056e1e6bf49
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Transition
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -541,10 +740,22 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JumpTrigger
+  - hash:
+      serializedVersion: 2
       Hash: ab6a2fed0a3d86e42cbaa680bbf9bfac
     assemblyName: Unity.2D.Tilemap.Extras.dll
     namespaceName: UnityEngine.Tilemaps
     className: AnimatedTile
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameTransition
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -655,6 +866,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 0135b4d9a196f8ace56cbde8f1be4edf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExitTrigger
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -691,16 +908,34 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: c68e03b01b8446e6acbcf802d5d85216
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IconClick
+  - hash:
+      serializedVersion: 2
       Hash: 699619b86d9359741a4f58540298c80b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 284f5d9bdaed2e2fa4d300ea0adcd718
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathZone
+  - hash:
+      serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a34de3fea7a7bec50ac79da0cc2c75b8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Buttons
   - hash:
       serializedVersion: 2
       Hash: 8a193a6dfd55f74156b7c92dde258413
@@ -721,16 +956,34 @@ ScriptsOnlyBuild:
     className: YourHandTrigger
   - hash:
       serializedVersion: 2
+      Hash: 4957d40224e0ad7aa0f12775cd5cb4c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerControl
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: AnimatorMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 7936d6fde1827da53f1e6c1cd50f67bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackpackLevelManager
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: ade513d7dee81214ba920cba5a8e8567
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelEnd
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -743,6 +996,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 299b6dec7f516de0a9cb028ac50fca57
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 3034934902fc0b9b3910b382a3527017
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UI
+  - hash:
+      serializedVersion: 2
+      Hash: ce7979ff5a66b4ce58044b1dc1ec1652
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerTrigger
   - hash:
       serializedVersion: 2
       Hash: e09e8bebc0fcd32bb8af1287a6b44816
@@ -773,6 +1044,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: ae39297f90c106291e32ef0927756c8a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DishClick
   - hash:
       serializedVersion: 2
       Hash: fc29f975ab35a5033d05bcfda3c82435
@@ -872,6 +1149,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackpackTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollRectValueChangedMessageListener
@@ -905,6 +1188,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: ce7979ff5a66b4ce58044b1dc1ec1652
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HandCollision
   - hash:
       serializedVersion: 2
       Hash: 0edeba255bdbade25edc357f1412ba38
@@ -979,7 +1268,7 @@ ScriptsOnlyBuild:
     className: StateMachine
   - hash:
       serializedVersion: 2
-      Hash: a4de0f9e27e94e6419442bc75e1be0e1
+      Hash: 241e4be47b9151403f6459a495cae6c5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MathLevelManager
@@ -1037,20 +1326,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: c2ad75c52735a1d4b218520384d839a7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FindTaskManager
-  - hash:
-      serializedVersion: 2
-      Hash: c68e03b01b8446e6acbcf802d5d85216
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: IconClick
   platform: 13
   scenePathNames:
-  - Assets/Scenes/NickScene.unity
+  - Assets/Scenes/Level1.unity
   playerPath: "C:/Users/nikit/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B/\u0432\u0430\u0436\u043D\u044B\u0435 \u0444\u0430\u0439\u043B\u044B/test3.apk"
+    \u0441\u0442\u043E\u043B/\u0432\u0430\u0436\u043D\u044B\u0435 \u0444\u0430\u0439\u043B\u044B/test_final.apk"
