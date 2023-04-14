@@ -396,6 +396,9 @@
 "Assets/Script/GameBGTransition.cs"
 "Assets/Script/GameManager.cs"
 "Assets/Script/GameTransition.cs"
+"Assets/Script/MenuTransition.cs"
+"Assets/Script/MenuUI.cs"
+"Assets/Script/Meta.cs"
 -langversion:9.0
 
 /deterministic

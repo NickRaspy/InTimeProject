@@ -36,6 +36,7 @@ public class PlatformMove : MonoBehaviour
         {
             if(!hint.IsDestroyed()) Destroy(hint);
             h = touch.deltaPosition.x/10;
+            Mathf.Clamp(h, -1f, 1f);
         }
     }
 #endif
@@ -59,9 +60,18 @@ public class PlatformMove : MonoBehaviour
         }
         if(isMoving && canMove)
         {
-            block1.transform.Translate(h*blockSpeed * Time.deltaTime / 3, 0, 0);
-            block2.transform.Translate(h*blockSpeed * Time.deltaTime / 2, 0, 0);
-            block3.transform.Translate(h*blockSpeed * Time.deltaTime, 0, 0);
+            if(h > -0.2f && h < 0.2f)
+            {
+                block1.transform.Translate(blockSpeed * Time.deltaTime / 6, 0, 0);
+                block2.transform.Translate(blockSpeed * Time.deltaTime / 3, 0, 0);
+                block3.transform.Translate(blockSpeed * Time.deltaTime / 2, 0, 0);
+            }
+            else
+            {
+                block1.transform.Translate(h * blockSpeed * Time.deltaTime / 3, 0, 0);
+                block2.transform.Translate(h * blockSpeed * Time.deltaTime / 2, 0, 0);
+                block3.transform.Translate(h * blockSpeed * Time.deltaTime, 0, 0);
+            }
         }
     }
 }

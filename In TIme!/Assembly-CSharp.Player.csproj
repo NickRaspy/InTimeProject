@@ -73,13 +73,16 @@
     <Compile Include="Assets\Levels\Platformer Final Level\Scripts\DeathZone.cs" />
     <Compile Include="Assets\Levels\Platformer Final Level\Scripts\Buttons.cs" />
     <Compile Include="Assets\Levels\Balance Level\Scripts\BalanceDeathZone.cs" />
+    <Compile Include="Assets\Script\MenuUI.cs" />
     <Compile Include="Assets\Levels\Catch Pen Level\Scripts\YourHandTrigger.cs" />
     <Compile Include="Assets\Levels\Platformer Final Level\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Levels\Backpack Level\Scripts\BackpackLevelManager.cs" />
     <Compile Include="Assets\Levels\Platformer Final Level\Scripts\LevelEnd.cs" />
+    <Compile Include="Assets\Script\Meta.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Levels\Platformer Final Level\Scripts\UI.cs" />
     <Compile Include="Assets\Levels\Volleyball Level\Scripts\PlayerTrigger.cs" />
+    <Compile Include="Assets\Script\MenuTransition.cs" />
     <Compile Include="Assets\Levels\Canteen Level\Scripts\DishClick.cs" />
     <Compile Include="Assets\Levels\Backpack Level\Scripts\BackpackTrigger.cs" />
     <Compile Include="Assets\Levels\Volleyball Level\Scripts\HandCollision.cs" />

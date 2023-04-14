@@ -7,6 +7,7 @@ public class UI : MonoBehaviour
 {
     [SerializeField] private Animator transUp;
     [SerializeField] private Animator transDown;
+    [SerializeField] private GameObject[] controls;
     public GameObject finalImage;
     void Start()
     {
@@ -18,5 +19,10 @@ public class UI : MonoBehaviour
         Debug.Log("Playing");
         transUp.SetBool("isReady", true);
         transDown.SetBool("isReady", true);
+    }
+    void Update()
+    {
+        if(Time.timeScale == 0f) foreach (GameObject go in controls) go.SetActive(false);
+        else foreach (GameObject go in controls) go.SetActive(true);
     }
 }

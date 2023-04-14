@@ -48,6 +48,7 @@ public class VolleyballLevelManager : MonoBehaviour
         {
             if(!hint.IsDestroyed()) Destroy(hint);
             h = touch.deltaPosition.x/10;
+            Mathf.Clamp(h, -1f, 1f);
         }
     }
 #endif

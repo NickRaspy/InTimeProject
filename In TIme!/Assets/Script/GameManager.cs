@@ -11,14 +11,13 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
     }
-    private GameObject gameRightNow;
+    public GameObject gameRightNow;
     public bool isInfinite = false;
     public bool win = false;
     public bool isMiniGamePlayed;
     public bool isFinal;
     public int gameNumber = 0;
-    public int livesNumber = 3;
-    private int amountOfLevels = 0;
+    public int livesNumber = 3; 
     [Header("For Infinite Only")]
     [SerializeField] private Image[] infiniteGameCounter = new Image[3];
     [Header ("Visuals in Scene")]
@@ -31,6 +30,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject allLives;
     [SerializeField] private GameObject winLoseScreen;
     [SerializeField] private GameObject timer;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private Text levelTitle;
     [Header("Sprite Collection")]
     [SerializeField] private Sprite lostLive;
     [SerializeField] private Sprite[] backgrounds;
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         winLoseScreen.SetActive(false);
+        pauseMenu.SetActive(false);
         for(int i = 0; i < miniGames.Count; i++)
         {
             unplayedMiniGames[i] = miniGames[i];
@@ -56,44 +58,59 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PrepareToGame());
         timer.SetActive(false);
     }
-
     public void MiniGameStart()
+    {
+        gameRightNow = Instantiate(gameRightNow);
+        if (isInfinite) foreach (Image count in infiniteGameCounter) count.gameObject.SetActive(false); else gameCounter.gameObject.SetActive(false); 
+        background.gameObject.SetActive(false); fairyAnim.gameObject.SetActive(false); allLives.SetActive(false);
+    }
+    public void MiniGameSet()
     {
         if (isInfinite)
         {
             int rGame = Random.Range(0, unplayedMiniGames.Count - 1);
-            gameRightNow = Instantiate(unplayedMiniGames[rGame]);
+            gameRightNow = unplayedMiniGames[rGame];
             unplayedMiniGames.RemoveAt(rGame);
             unplayedMiniGames.Add(gameRightNow);
+            timer.SetActive(true);
+            StartCoroutine(Timer());
         }
         else
         {
             if (unplayedMiniGames.Count > 0)
             {
                 int rGame = Random.Range(0, unplayedMiniGames.Count);
-                gameRightNow = Instantiate(unplayedMiniGames[rGame]);
+                gameRightNow = unplayedMiniGames[rGame];
                 unplayedMiniGames.RemoveAt(rGame);
                 timer.SetActive(true);
                 StartCoroutine(Timer());
             }
-            else gameRightNow = Instantiate(finalGame);
+            else gameRightNow = finalGame;
         }
-        gameCounter.gameObject.SetActive(false); background.gameObject.SetActive(false); fairyAnim.gameObject.SetActive(false); allLives.SetActive(false);
     }
     public void BGChange(bool isFinal)
     {
         if (!isFinal)
         {
-            int rBG = Random.Range(0, backgrounds.Length);
+            int rBG = Random.Range(0, backgrounds.Length - 1);
+            Sprite changeBG = backgrounds[rBG];
             background.sprite = backgrounds[rBG];
+            backgrounds[rBG] = backgrounds[backgrounds.Length- 1];
+            backgrounds[backgrounds.Length - 1] = changeBG;
         }
         else background.sprite = finalBG;
+    }
+    public void LevelTitleSet()
+    {
+        levelTitle.text = gameRightNow.transform.Find("Meta").GetComponent<Meta>().title;
+        levelTitle.GetComponent<Animator>().Play("LevelTitle");
     }
     public void MiniGameEnd()
     {
         Destroy(gameRightNow);
         gameRightNow = null;
-        gameCounter.gameObject.SetActive(true); background.gameObject.SetActive(true); fairyAnim.gameObject.SetActive(true); allLives.SetActive(true);
+        if (isInfinite) foreach (Image count in infiniteGameCounter) count.gameObject.SetActive(true); else gameCounter.gameObject.SetActive(true);
+        background.gameObject.SetActive(true); fairyAnim.gameObject.SetActive(true); allLives.SetActive(true);
         timer.SetActive(false);
         isMiniGamePlayed = false;
     }
@@ -111,9 +128,9 @@ public class GameManager : MonoBehaviour
                 lives[livesNumber].sprite = lostLive;
                 livesNumber--;
             }
-            StartCoroutine(AnimationCooldown());
             gameNumber++;
-            gameCounter.sprite = numbers[gameNumber];
+            InfiniteCounterSet(gameNumber);
+            StartCoroutine(AnimationCooldown());
         }
         else
         {
@@ -195,7 +212,8 @@ public class GameManager : MonoBehaviour
     {
         for(int i = 0; i < infiniteGameCounter.Length; i++)
         {
-            infiniteGameCounter[i].sprite = numbers[a % 10];
+            if (a > 0) infiniteGameCounter[i].sprite = numbers[(a - 1)%10];
+            else infiniteGameCounter[i].sprite = numbers[9];
             a /= 10;
         }
     }
@@ -205,7 +223,17 @@ public class GameManager : MonoBehaviour
     }
     public void ExitLevel()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Menu");
+    }
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    public void Continue()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
     IEnumerator Timer()
     {
@@ -220,19 +248,18 @@ public class GameManager : MonoBehaviour
             wiresSprites[i] = wires.transform.Find((i + 1).ToString()).gameObject.GetComponent<Image>();
             wiresSprites[i].sprite = wire; 
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.75f);
         wires.transform.Find("7").gameObject.SetActive(false);
         wiresSprites[5].sprite = burnedWire;
         for (int i = 5; i > 0; i--) 
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.75f);
             wiresSprites[i].gameObject.SetActive(false);
             wiresSprites[i - 1].sprite = burnedWire;
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.75f);
         wiresSprites[0].gameObject.SetActive(false);
         timer.transform.Find("Bomb").GetComponent<Image>().sprite = explosion;
-        yield return new WaitForSeconds(1f);
         EndGame();
     }
 }

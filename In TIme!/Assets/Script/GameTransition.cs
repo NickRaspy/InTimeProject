@@ -9,4 +9,12 @@ public class GameTransition : MonoBehaviour
         if (!GameManager.instance.isMiniGamePlayed) GameManager.instance.MiniGameStart();
         else GameManager.instance.MiniGameEnd();
     }
+    void PrepareToStart()
+    {
+        if (!GameManager.instance.isMiniGamePlayed)
+        {
+            GameManager.instance.MiniGameSet();
+            GameManager.instance.LevelTitleSet();
+        }
+    }
 }
