@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662c3f4c5ca62054fb52f2ff69ae3ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "\u041D\u0430\u0439\u0434\u0438 \u0437\u0430\u0434\u0430\u043D\u0438\u0435
-    \u0432 Word!"
+  title:
+  - Find task in Word file!
+  - "\u041D\u0430\u0439\u0434\u0438 \u0437\u0430\u0434\u0430\u043D\u0438\u0435 \u0432
+    Word!"
 --- !u!1 &6611027072515136228
 GameObject:
   m_ObjectHideFlags: 0
@@ -6076,6 +6078,14 @@ MonoBehaviour:
   - {fileID: -1218833651, guid: 307b2a2f72f097c4c91f0115f40c40ef, type: 3}
   - {fileID: -615867968, guid: 307b2a2f72f097c4c91f0115f40c40ef, type: 3}
   - {fileID: -1725151672, guid: 307b2a2f72f097c4c91f0115f40c40ef, type: 3}
+  taskLang:
+  - Task
+  - "\u0417\u0430\u0434\u0430\u043D\u0438\u0435"
+  wLang:
+  - winScreen: {fileID: 21300000, guid: 460791c58b477da4a8aa926c2128a567, type: 3}
+    loseScreen: {fileID: 21300000, guid: a577cd254a9667d4a87f8d1b3f2dc0a8, type: 3}
+  - winScreen: {fileID: 21300000, guid: 09cefefb0f7eb674f99264201144e21c, type: 3}
+    loseScreen: {fileID: 21300000, guid: 9839cd93777366f4ca5401e7e6d12d80, type: 3}
   canClick: 1
 --- !u!1 &6611027074081998782
 GameObject:

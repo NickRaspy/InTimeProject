@@ -792,4 +792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662c3f4c5ca62054fb52f2ff69ae3ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "\u041F\u043E\u0439\u043C\u0430\u0439 \u0440\u0443\u0447\u043A\u0443!"
+  title:
+  - Catch the pen!
+  - "\u041F\u043E\u0439\u043C\u0430\u0439 \u0440\u0443\u0447\u043A\u0443!"

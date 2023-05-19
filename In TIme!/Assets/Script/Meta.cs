@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Meta : MonoBehaviour
 {
-    public string title;
+    public List<string> title;
 }

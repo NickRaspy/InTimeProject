@@ -17,8 +17,10 @@ ScriptsOnlyBuild:
     - GameTransition
     - HandCollision
     - IconClick
+    - InfosLang
     - ItemMove
     - JumpTrigger
+    - LanguageManager
     - LevelEnd
     - MathLevelManager
     - MenuTransition
@@ -36,13 +38,20 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    - UnityEditor.Tilemaps.TilemapEditorToolPreferences
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
+    Unity.2D.Tilemap.Extras.Editor.dll:
+    - UnityEditor.Tilemaps.GameObjectBrush
+    - UnityEditor.Tilemaps.GroupBrush
+    - UnityEditor.Tilemaps.LineBrush
+    - UnityEditor.Tilemaps.RandomBrush
     Unity.PlasticSCM.Editor.dll:
     - Unity.PlasticSCM.Editor.PlasticWindow
     Unity.Rider.Editor.dll:
@@ -50,8 +59,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -72,6 +83,8 @@ ScriptsOnlyBuild:
     - CanteenLevelManager/Dishes
     - CanteenLevelManager/Human
     - DeathZone/ObstacleType
+    - FindTaskManager/WindowsLang
+    - LanguageManager/Languages
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -90,6 +103,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MenuUI
     methodName: LevelSet
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuUI
+    methodName: LangChange
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuUI
+    methodName: LangChange
   - assembly: Assembly-CSharp
     fullTypeName: MenuUI
     methodName: LevelSet
@@ -270,6 +289,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7890}
     - Class: 114
       Script: {instanceID: 8584}
+    - Class: 114
+      Script: {instanceID: 43730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -401,6 +422,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7890}
     - Class: 114
       Script: {instanceID: 8584}
+    - Class: 114
+      Script: {instanceID: 43730}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -460,6 +483,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6908}
     - Class: 114
       Script: {instanceID: 6932}
+    - Class: 114
+      Script: {instanceID: 7310}
+    - Class: 114
+      Script: {instanceID: 31706}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -797,7 +824,7 @@ ScriptsOnlyBuild:
     className: UnityOnSelectMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c2ad75c52735a1d4b218520384d839a7
+      Hash: b4209179729cfda42a7cb3b51e59dfce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FindTaskManager
@@ -1193,7 +1220,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: b4f34e9d50eea5712331f9ad0691566d
+      Hash: fe1ea4b43a375833af06bcb7a5e3ad6d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuUI
@@ -1241,7 +1268,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: d2b5873129758997e007c7e170977140
+      Hash: 313283369ce72785969bd7bbe76c4882
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Meta
@@ -1587,11 +1614,23 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: f292a1e4c809b30b7b2bd2ba967d6537
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LanguageManager
+  - hash:
+      serializedVersion: 2
+      Hash: a7650a393fc19fe794ff4dbe61c03c9e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InfosLang
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Level1.unity
   - Assets/Scenes/Infinite.unity
   playerPath: "C:/Users/nikit/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B/\u0432\u0430\u0436\u043D\u044B\u0435 \u0444\u0430\u0439\u043B\u044B/In
-    Time!.apk"
+    \u0441\u0442\u043E\u043B/\u0432\u0430\u0436\u043D\u044B\u0435 \u0444\u0430\u0439\u043B\u044B/in
+    time/In Time Language Update/In Time!.apk"

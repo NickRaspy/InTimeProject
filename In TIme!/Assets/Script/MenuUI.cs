@@ -7,6 +7,7 @@ public class MenuUI : MonoBehaviour
 {
     [SerializeField] GameObject transitions;
     [SerializeField] GameObject camera;
+    [SerializeField] GameObject langManager;
     private int level;
     void Start()
     {
@@ -50,5 +51,10 @@ public class MenuUI : MonoBehaviour
         Destroy(gameObject);
         Destroy(camera);
         Destroy(transitions);
+    }
+    public void LangChange(int lang)
+    {
+        langManager.GetComponent<LanguageManager>().lang = lang;
+        langManager.GetComponent<LanguageManager>().Lang = lang;
     }
 }

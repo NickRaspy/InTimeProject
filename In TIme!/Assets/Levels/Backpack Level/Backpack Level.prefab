@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662c3f4c5ca62054fb52f2ff69ae3ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "\u041F\u043E\u043B\u043E\u0436\u0438 \u0432\u0435\u0449\u044C \u0432 \u0440\u044E\u043A\u0437\u0430\u043A!"
+  title:
+  - Put this item into the backpack!
+  - "\u041F\u043E\u043B\u043E\u0436\u0438\u0442\u0435 \u044D\u0442\u0443 \u0432\u0435\u0449\u044C
+    \u0432 \u0440\u044E\u043A\u0437\u0430\u043A!"
 --- !u!1 &4232799745309352976
 GameObject:
   m_ObjectHideFlags: 0

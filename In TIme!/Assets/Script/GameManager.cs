@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
     }
     public void LevelTitleSet()
     {
-        levelTitle.text = gameRightNow.transform.Find("Meta").GetComponent<Meta>().title;
+        levelTitle.text = gameRightNow.transform.Find("Meta").GetComponent<Meta>().title[LanguageManager.lmInstance.lang];
         levelTitle.GetComponent<Animator>().Play("LevelTitle");
     }
     public void MiniGameEnd()

@@ -1145,4 +1145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662c3f4c5ca62054fb52f2ff69ae3ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "\u041E\u0442\u0431\u0435\u0439 \u043C\u044F\u0447!"
+  title:
+  - Hit the ball!
+  - "\u041E\u0442\u0431\u0435\u0439 \u043C\u044F\u0447!"
